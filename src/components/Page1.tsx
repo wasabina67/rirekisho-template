@@ -1,4 +1,6 @@
 import photo from '../assets/photo.jpg'
+import Box from './Box'
+import HistoryTable from './HistoryTable'
 
 const PROFILE = {
   furigana: 'りれき たろう',
@@ -19,11 +21,11 @@ const EDUCATION = [
   { year: 2000, month: 1, content: 'wip' },
 ] as const
 
-const LICENSES = [
+const WORK = [
   { year: 2000, month: 1, content: 'wip' },
 ] as const
 
-const WORK = [
+const LICENSES = [
   { year: 2000, month: 1, content: 'wip' },
 ] as const
 
@@ -106,6 +108,12 @@ function Page1() {
           </tbody>
         </table>
 
+        <HistoryTable title="学歴" rows={EDUCATION} />
+        <HistoryTable title="職歴" rows={WORK} />
+        <HistoryTable title="免許・資格" rows={LICENSES} />
+
+        <Box title="志望動機">プレースホルダー</Box>
+        <Box title="本人希望記入欄">プレースホルダー</Box>
       </article>
     </section>
   )

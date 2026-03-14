@@ -71,3 +71,33 @@
   height: auto;
   object-fit: cover;
 }
+
+.history th,
+.history td {
+  text-align: center;
+}
+
+.history td:last-child {
+  text-align: left;
+}
+
+.history td.history-end {
+  text-align: right;
+}
+
+.box {
+  border: 2px solid #000;
+  margin-bottom: 8px;
+}
+
+.box-header {
+  text-align: center;
+  font-size: 12px;
+  padding: 2px 4px;
+  border-bottom: 1px solid #000;
+}
+
+.box-body {
+  padding: 4px;
+  min-height: 80px;
+}
