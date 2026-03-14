@@ -1,4 +1,4 @@
-// import photo from '../assets/photo.jpg'
+import photo from '../assets/photo.jpg'
 
 const PROFILE = {
   furigana: 'りれき たろう',
@@ -14,6 +14,18 @@ const CONTACT = {
   phone: 'xxx-xxxx-xxxx',
   email: 'taro@example.com',
 } as const
+
+const EDUCATION = [
+  { year: 2000, month: 1, content: 'wip' },
+] as const
+
+const LICENSES = [
+  { year: 2000, month: 1, content: 'wip' },
+] as const
+
+const WORK = [
+  { year: 2000, month: 1, content: 'wip' },
+] as const
 
 function formatWarekiDate(): string {
   const today = new Date()
@@ -40,6 +52,59 @@ function Page1() {
           <h1>履 歴 書</h1>
           <p className="date">{formatWarekiDate()}</p>
         </div>
+
+        <table className="profile-info">
+          <colgroup>
+            <col style={{ width: '100px' }} />
+            <col />
+            <col style={{ width: '120px' }} />
+            <col style={{ width: '120px' }} />
+          </colgroup>
+          <tbody>
+            <tr>
+              <th className="furigana">ふりがな</th>
+              <td className="furigana-value" colSpan={2}>{PROFILE.furigana}</td>
+              <td rowSpan={3} className="photo"><img src={photo} /></td>
+            </tr>
+            <tr>
+              <th className="name">氏名</th>
+              <td className="name-value" colSpan={2}>{PROFILE.name}</td>
+            </tr>
+            <tr>
+              <th className="birthday">生年月日</th>
+              <td className="birthday-value">{PROFILE.birth.year}年{PROFILE.birth.month}月{PROFILE.birth.day}日 (満 {calcAge(PROFILE.birth)} 歳)</td>
+              <td className="gender">性別: {PROFILE.gender}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table className="contact-info">
+          <colgroup>
+            <col style={{ width: '100px' }} />
+            <col />
+            <col style={{ width: '120px' }} />
+            <col style={{ width: '120px' }} />
+          </colgroup>
+          <tbody>
+            <tr>
+              <th className="furigana">ふりがな</th>
+              <td colSpan={3}>{CONTACT.furigana}</td>
+            </tr>
+            <tr>
+              <th>現住所</th>
+              <td colSpan={3}>
+                <span>〒{CONTACT.postalCode}</span>
+                <br />
+                <span>{CONTACT.address}</span>
+              </td>
+            </tr>
+            <tr>
+              <th>連絡先</th>
+              <td>{CONTACT.phone}</td>
+              <td colSpan={2}>{CONTACT.email}</td>
+            </tr>
+          </tbody>
+        </table>
 
       </article>
     </section>

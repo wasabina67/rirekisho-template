@@ -39,3 +39,35 @@
   font-weight: normal;
   background-color: transparent;
 }
+
+.profile-info .furigana,
+.contact-info .furigana {
+  font-size: 10px;
+  height: 24px;
+}
+
+.profile-info .name {
+  font-size: 14px;
+  height: 64px;
+}
+
+.profile-info .name-value {
+  font-size: 18px;
+}
+
+.profile-info .birthday-value {
+  height: 24px;
+}
+
+.profile-info .photo {
+  height: auto;
+  text-align: center;
+  vertical-align: middle;
+  padding: 4px;
+}
+
+.profile-info .photo img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
