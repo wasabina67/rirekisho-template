@@ -1,16 +1,13 @@
 import './App.css'
+import Page1 from './components/Page1'
+import Page2 from './components/Page2'
 
 function App() {
   return (
-    <div className="container">
-      <h1 className="title">Vite + React + TypeScript</h1>
-      <p className="description">Minimal template to get started.</p>
-      <div className="features">
-        <span className="badge">Vite</span>
-        <span className="badge">React 19</span>
-        <span className="badge">TypeScript</span>
-      </div>
-    </div>
+    <>
+      <Page1 />
+      <Page2 />
+    </>
   )
 }
 
