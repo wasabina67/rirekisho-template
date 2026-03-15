@@ -44,7 +44,7 @@ function formatDate(): string {
   return `${year}年${month}月${day}日 現在`
 }
 
-function calcAge({ year, month, day }: { year: number; month: number; day: number }): number {
+function calcAge({ year, month, day }: typeof PROFILE.birth): number {
   const today = new Date()
   let age = today.getFullYear() - year
   const m = today.getMonth() + 1 - month
@@ -115,7 +115,7 @@ function Page1() {
         </table>
 
         <HistoryTable title="学歴" rows={EDUCATION} />
-        <HistoryTable title="職歴" rows={WORK} />
+        <HistoryTable title="職歴" rows={WORK} showCurrent showEnd />
         <HistoryTable title="免許・資格" rows={LICENSES} />
 
         <Box title="志望動機">

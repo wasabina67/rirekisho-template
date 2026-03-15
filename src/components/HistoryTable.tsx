@@ -1,4 +1,4 @@
-function HistoryTable({ title, rows }: { title: string; rows: ReadonlyArray<{ year: number; month: number; content: string }> }) {
+function HistoryTable({ title, rows, showCurrent = false, showEnd = false }: { title: string; rows: ReadonlyArray<{ year: number; month: number; content: string }>; showCurrent?: boolean; showEnd?: boolean }) {
   return (
     <table className="history">
       <colgroup>
@@ -21,19 +21,19 @@ function HistoryTable({ title, rows }: { title: string; rows: ReadonlyArray<{ ye
             <td>{row.content}</td>
           </tr>
         ))}
-        {title === '職歴' && (
-          <>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>現在に至る</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td className="history-end">以上</td>
-            </tr>
-          </>
+        {showCurrent && (
+          <tr>
+            <td></td>
+            <td></td>
+            <td>現在に至る</td>
+          </tr>
+        )}
+        {showEnd && (
+          <tr>
+            <td></td>
+            <td></td>
+            <td className="history-end">以上</td>
+          </tr>
         )}
       </tbody>
     </table>
