@@ -18,15 +18,22 @@ const CONTACT = {
 } as const
 
 const EDUCATION = [
-  { year: 2000, month: 1, content: 'wip' },
+  { year: 2015, month: 4, content: '東京都立○○高等学校 入学' },
+  { year: 2018, month: 3, content: '東京都立○○高等学校 卒業' },
+  { year: 2018, month: 4, content: '○○大学 工学部 情報工学科 入学' },
+  { year: 2022, month: 3, content: '○○大学 工学部 情報工学科 卒業' },
 ] as const
 
 const WORK = [
-  { year: 2000, month: 1, content: 'wip' },
+  { year: 2022, month: 4, content: '株式会社○○ 入社' },
+  { year: 2022, month: 4, content: 'システム開発部に配属' },
+  { year: 2024, month: 9, content: '一身上の都合により退職' },
 ] as const
 
 const LICENSES = [
-  { year: 2000, month: 1, content: 'wip' },
+  { year: 2020, month: 6, content: '普通自動車第一種運転免許 取得' },
+  { year: 2021, month: 11, content: '基本情報技術者試験 合格' },
+  { year: 2023, month: 6, content: '応用情報技術者試験 合格' },
 ] as const
 
 function formatDate(): string {
