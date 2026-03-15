@@ -89,7 +89,7 @@ function Page1() {
           <tbody>
             <tr>
               <th className="furigana">ふりがな</th>
-              <td colSpan={3}>{CONTACT.furigana}</td>
+              <td className="furigana-value" colSpan={3}>{CONTACT.furigana}</td>
             </tr>
             <tr>
               <th>現住所</th>

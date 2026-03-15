@@ -46,6 +46,11 @@
   height: 24px;
 }
 
+.profile-info .furigana-value,
+.contact-info .furigana-value {
+  font-size: 12px;
+}
+
 .profile-info .name {
   font-size: 14px;
   height: 64px;
