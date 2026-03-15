@@ -14,6 +14,7 @@ function HistoryTable({ title, rows, showCurrent = false, showEnd = false }: { t
         </tr>
       </thead>
       <tbody>
+        {/* rows are static data, so index keys are safe */}
         {rows.map((row, i) => (
           <tr key={i}>
             <td>{row.year}</td>

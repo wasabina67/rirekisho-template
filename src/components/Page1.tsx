@@ -36,6 +36,7 @@ const LICENSES = [
   { year: 2023, month: 6, content: '応用情報技術者試験 合格' },
 ] as const
 
+// Intentionally uses runtime date so the resume always shows the current date when viewed/printed
 function formatDate(): string {
   const today = new Date()
   const year = today.getFullYear()
@@ -44,6 +45,7 @@ function formatDate(): string {
   return `${year}年${month}月${day}日 現在`
 }
 
+// Intentionally uses runtime date so the age is always up to date when viewed/printed
 function calcAge({ year, month, day }: typeof PROFILE.birth): number {
   const today = new Date()
   let age = today.getFullYear() - year
