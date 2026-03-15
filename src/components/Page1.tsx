@@ -29,13 +29,12 @@ const LICENSES = [
   { year: 2000, month: 1, content: 'wip' },
 ] as const
 
-function formatWarekiDate(): string {
+function formatDate(): string {
   const today = new Date()
   const year = today.getFullYear()
   const month = today.getMonth() + 1
   const day = today.getDate()
-  const reiwaYear = year - 2018
-  return `令和${reiwaYear}年${month}月${day}日 現在`
+  return `${year}年${month}月${day}日 現在`
 }
 
 function calcAge({ year, month, day }: { year: number; month: number; day: number }): number {
@@ -52,7 +51,7 @@ function Page1() {
       <article className="rirekisho">
         <div className="header">
           <h1>履 歴 書</h1>
-          <p className="date">{formatWarekiDate()}</p>
+          <p className="date">{formatDate()}</p>
         </div>
 
         <table className="profile-info">
