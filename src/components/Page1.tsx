@@ -25,9 +25,9 @@ const EDUCATION = [
 ] as const
 
 const WORK = [
-  { year: 2022, month: 4, content: '株式会社○○ 入社' },
-  { year: 2022, month: 4, content: 'システム開発部に配属' },
+  { year: 2022, month: 4, content: '株式会社○○ システム開発部 入社' },
   { year: 2024, month: 9, content: '一身上の都合により退職' },
+  { year: 2024, month: 10, content: '株式会社×× システム開発部 入社' },
 ] as const
 
 const LICENSES = [
