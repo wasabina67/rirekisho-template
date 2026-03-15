@@ -65,7 +65,7 @@ function Page1() {
             <tr>
               <th className="furigana">ふりがな</th>
               <td className="furigana-value" colSpan={2}>{PROFILE.furigana}</td>
-              <td rowSpan={3} className="photo"><img src={photo} /></td>
+              <td rowSpan={3} className="photo"><img src={photo} alt="証明写真" /></td>
             </tr>
             <tr>
               <th className="name">氏名</th>
