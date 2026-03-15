@@ -47,8 +47,8 @@ function formatDate(): string {
 function calcAge({ year, month, day }: typeof PROFILE.birth): number {
   const today = new Date()
   let age = today.getFullYear() - year
-  const m = today.getMonth() + 1 - month
-  if (m < 0 || (m === 0 && today.getDate() < day)) age--
+  const monthDiff = today.getMonth() + 1 - month
+  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < day)) age--
   return age
 }
 
