@@ -118,8 +118,14 @@ function Page1() {
         <HistoryTable title="職歴" rows={WORK} />
         <HistoryTable title="免許・資格" rows={LICENSES} />
 
-        <Box title="志望動機">プレースホルダー</Box>
-        <Box title="本人希望記入欄">プレースホルダー</Box>
+        <Box title="志望動機">
+          貴社の先進的な技術力と幅広い事業領域に魅力を感じ、志望いたしました。
+          前職ではWebアプリケーションの開発に携わり、要件定義から運用まで一貫して経験いたしました。
+          これまでの経験を活かし、貴社の事業発展に貢献したいと考えております。
+        </Box>
+        <Box title="本人希望記入欄">
+          勤務地・職種など、貴社の規定に従います。
+        </Box>
       </article>
     </section>
   )
